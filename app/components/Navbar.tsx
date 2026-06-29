@@ -72,42 +72,42 @@ export default function Navbar() {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 w-full z-50 h-20 md:h-24 px-6 md:px-16 flex items-center justify-between transition-all duration-700 ${
-        isMenuOpen ? 'bg-white border-b border-primary-navy/10' : 'bg-white/95 backdrop-blur-md border-b border-primary-navy/10 shadow-md'
+      <header className={`fixed top-0 left-0 w-full z-50 h-20 sm:h-24 md:h-28 px-4 sm:px-6 md:px-12 lg:px-16 flex items-center justify-between transition-all duration-500 ${
+        isMenuOpen ? 'bg-white border-b border-primary-navy/10' : 'bg-white/95 backdrop-blur-md border-b border-primary-navy/10 shadow-sm'
       }`}>
-        {/* Left column: Extended Logo covering full height of navbar */}
-        <div className="flex-1 flex items-center justify-start h-full my-0 py-0 z-20 ml-2 sm:ml-6 md:ml-10 lg:ml-12">
+        {/* Left column: Logo */}
+        <div className="flex items-center justify-start h-full py-1.5 sm:py-2 z-20">
           <Link 
             href="/" 
             onClick={() => setIsMenuOpen(false)}
-            className="hover-target inline-flex items-center h-full my-0 py-0 relative transition-transform duration-300 hover:scale-[1.01]"
+            className="hover-target inline-flex items-center h-full relative transition-transform duration-300 hover:scale-[1.02]"
           >
             <Image
               src="/logo-final.png"
               alt="Arventis Partners Logo"
-              width={350}
-              height={100}
+              width={450}
+              height={140}
               priority
-              className="h-full w-auto object-contain my-0 py-0 mix-blend-multiply filter contrast-[1.02]"
+              className="h-full max-h-20 sm:max-h-22 md:max-h-24 w-auto object-contain mix-blend-multiply filter contrast-[1.08] scale-110 sm:scale-115 md:scale-120 origin-left"
             />
           </Link>
         </div>
 
-        {/* Right column: Hamburger icon */}
-        <div className="flex-1 flex justify-end items-center z-20">
+        {/* Right column: Hamburger Toggle (Visible on all screen sizes) */}
+        <div className="flex items-center justify-end z-20">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle navigation menu"
-            className="relative z-50 p-2 transition-colors duration-300 focus:outline-none hover-target text-primary-navy hover:text-primary-gold-dark"
+            className="relative z-50 p-1.5 sm:p-2 transition-colors duration-300 focus:outline-none hover-target text-primary-navy hover:text-primary-gold-dark"
           >
-            {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
+            {isMenuOpen ? <X className="w-8 h-8 sm:w-9 sm:h-9" /> : <Menu className="w-8 h-8 sm:w-9 sm:h-9" />}
           </button>
         </div>
       </header>
 
-      {/* Full-page menu drawer translating from right */}
+      {/* Full-page menu drawer translating from right to left */}
       <div
-        className={`fixed inset-0 z-40 bg-white text-primary-navy flex flex-col justify-between px-6 py-12 md:p-20 transition-transform duration-1000 ease-in-out ${
+        className={`fixed inset-0 z-40 bg-white text-primary-navy flex flex-col justify-between px-6 py-12 md:p-20 transition-transform duration-700 ease-in-out ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -135,52 +135,7 @@ export default function Navbar() {
 
         {/* Drawer Footer */}
         <div className="relative z-10 border-t border-primary-navy/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs tracking-widest text-primary-navy/50 uppercase font-sans">
-          {/* Social Media Links replacing "Judgment, Applied" */}
-          <div className="flex items-center gap-3">
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="LinkedIn"
-              className="w-8 h-8 rounded-full bg-primary-navy text-white flex items-center justify-center hover:bg-primary-gold-dark transition-all duration-300 hover:scale-110 shadow-sm"
-            >
-              <LinkedInIcon className="w-3.5 h-3.5" />
-            </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Twitter / X"
-              className="w-8 h-8 rounded-full bg-primary-navy text-white flex items-center justify-center hover:bg-primary-gold-dark transition-all duration-300 hover:scale-110 shadow-sm"
-            >
-              <TwitterIcon className="w-3.5 h-3.5" />
-            </a>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Facebook"
-              className="w-8 h-8 rounded-full bg-primary-navy text-white flex items-center justify-center hover:bg-primary-gold-dark transition-all duration-300 hover:scale-110 shadow-sm"
-            >
-              <FacebookIcon className="w-3.5 h-3.5" />
-            </a>
-            <a
-              href="https://youtube.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="YouTube"
-              className="w-8 h-8 rounded-full bg-primary-navy text-white flex items-center justify-center hover:bg-primary-gold-dark transition-all duration-300 hover:scale-110 shadow-sm"
-            >
-              <YoutubeIcon className="w-3.5 h-3.5" />
-            </a>
-            <a
-              href="mailto:contact@arventispartners.com"
-              title="RSS / Insights Feed"
-              className="w-8 h-8 rounded-full bg-primary-navy text-white flex items-center justify-center hover:bg-primary-gold-dark transition-all duration-300 hover:scale-110 shadow-sm"
-            >
-              <RssIcon className="w-3.5 h-3.5" />
-            </a>
-          </div>
+          <div>Where Strategy meets consulting</div>
           <div>ARVENTIS PARTNERS &copy; {new Date().getFullYear()}</div>
         </div>
       </div>

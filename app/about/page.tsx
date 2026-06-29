@@ -65,7 +65,7 @@ export default function AboutPage() {
       <section className="relative w-full bg-[#081226] pt-32 pb-16 md:pt-40 md:pb-24 px-6 md:px-16 border-b border-white/10 text-white">
         <div className="max-w-7xl mx-auto relative z-10">
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight leading-normal text-white mb-6">
-            <RevealHeading>ABOUT  US</RevealHeading>
+            <RevealHeading>ABOUT  </RevealHeading>
           </h1>
         
         </div>
@@ -80,7 +80,7 @@ export default function AboutPage() {
             </span>
             <span className="text-primary-navy/30">•</span>
             <span className="font-serif italic text-sm text-primary-navy/60">
-              Judgment, Applied.
+              Where Strategy meets consulting
             </span>
           </div>
 

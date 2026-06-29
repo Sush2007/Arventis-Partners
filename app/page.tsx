@@ -155,26 +155,30 @@ export default function Home() {
             </div>
           ))}
           
-          {/* Calming gradient overlays: left-to-right dark fade for text legibility, bottom fade for section transition */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#081226]/90 via-[#081226]/50 to-transparent z-10" />
+          {/* Calming gradient overlays: centered dark overlay for legibility, bottom fade for section transition */}
+          <div className="absolute inset-0 bg-[#081226]/65 z-10" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#081226] via-transparent to-transparent z-10" />
         </div>
 
         {/* Hero Content Container */}
-        <div className="relative z-10 max-w-5xl my-auto pt-8 pb-12">
-          <div key={currentSlide} className="animate-slide-fade-in-up space-y-6">
-            <span className="font-sans text-xs md:text-sm tracking-[0.3em] uppercase text-primary-gold font-bold block">
+        <div className="relative z-10 max-w-5xl mx-auto my-auto pt-10 pb-12 text-center flex flex-col items-center justify-center">
+          <div key={currentSlide} className="animate-slide-fade-in-up space-y-4 sm:space-y-6 flex flex-col items-center text-center">
+            <span className="font-sans text-sm sm:text-base md:text-lg tracking-[0.3em] uppercase text-primary-gold font-bold block mx-auto">
               {slides[currentSlide].tagline}
             </span>
 
-            <h1 className="text-white font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tight leading-[1.08] max-w-5xl drop-shadow-lg">
+            <h1 className="text-white font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tight leading-[1.1] max-w-5xl drop-shadow-lg mx-auto">
               {slides[currentSlide].title}
             </h1>
+
+            <p className="font-sans text-sm sm:text-base md:text-lg text-white/85 font-light leading-relaxed max-w-3xl pt-1 mx-auto">
+              {slides[currentSlide].description}
+            </p>
           </div>
         </div>
 
-        {/* Slider Controls (Pagination & Chevrons) */}
-        <div className="relative z-10 w-full flex items-center justify-between pb-4 border-t border-white/15 pt-8 mt-auto">
+        {/* Slider Controls (Pagination & Chevrons - Hidden on mobile) */}
+        <div className="relative z-10 w-full hidden md:flex items-center justify-between pb-4 border-t border-white/15 pt-8 mt-auto">
           {/* Pagination numbers */}
           <div className="flex items-center gap-4 md:gap-8 overflow-x-auto no-scrollbar py-2">
             {slides.map((slide, idx) => (

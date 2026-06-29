@@ -45,8 +45,8 @@ function RssIcon({ className = "w-4 h-4" }: { className?: string }) {
 
 const Footer = () => {
   return (
-    <footer className="relative w-full bg-white text-primary-navy py-16 px-6 md:px-16 border-t border-primary-navy/10 font-sans">
-      <div className="max-w-7xl mx-auto space-y-12">
+    <footer className="relative w-full bg-white text-primary-navy py-12 sm:py-16 px-4 sm:px-6 md:px-16 border-t border-primary-navy/10 font-sans">
+      <div className="max-w-7xl mx-auto space-y-8 sm:space-y-12">
         
         {/* 1. TOP BRAND HEADER & PARALLEL DISCLAIMER / SECONDARY LINKS */}
         <div className="flex flex-col md:flex-row md:items-start justify-between gap-8">
@@ -56,7 +56,7 @@ const Footer = () => {
               ARVENTIS PARTNERS
             </h2>
             <p className="font-serif italic text-sm text-primary-navy/60 mt-1">
-              Judgment, Applied.
+              Where Strategy meets consulting
             </p>
           </div>
 
@@ -93,56 +93,6 @@ const Footer = () => {
             </p>
           </div>
         </div>
-
-        {/* 2. SOCIAL MEDIA LINKS (IN PLACE OF OUR PEOPLE / SERVICES LINKS) */}
-        <div className="pt-2">
-          <div className="flex items-center gap-3">
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="LinkedIn"
-              className="w-9 h-9 rounded-full bg-primary-navy text-white flex items-center justify-center hover:bg-primary-gold-dark transition-all duration-300 hover:scale-110 shadow-sm"
-            >
-              <LinkedInIcon className="w-4 h-4" />
-            </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Twitter / X"
-              className="w-9 h-9 rounded-full bg-primary-navy text-white flex items-center justify-center hover:bg-primary-gold-dark transition-all duration-300 hover:scale-110 shadow-sm"
-            >
-              <TwitterIcon className="w-4 h-4" />
-            </a>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Facebook"
-              className="w-9 h-9 rounded-full bg-primary-navy text-white flex items-center justify-center hover:bg-primary-gold-dark transition-all duration-300 hover:scale-110 shadow-sm"
-            >
-              <FacebookIcon className="w-4 h-4" />
-            </a>
-            <a
-              href="https://youtube.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="YouTube"
-              className="w-9 h-9 rounded-full bg-primary-navy text-white flex items-center justify-center hover:bg-primary-gold-dark transition-all duration-300 hover:scale-110 shadow-sm"
-            >
-              <YoutubeIcon className="w-4 h-4" />
-            </a>
-            <a
-              href="mailto:contact@arventispartners.com"
-              title="RSS / Insights Feed"
-              className="w-9 h-9 rounded-full bg-primary-navy text-white flex items-center justify-center hover:bg-primary-gold-dark transition-all duration-300 hover:scale-110 shadow-sm"
-            >
-              <RssIcon className="w-4 h-4" />
-            </a>
-          </div>
-        </div>
-
       </div>
     </footer>
   );

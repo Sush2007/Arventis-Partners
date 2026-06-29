@@ -439,12 +439,12 @@ export default function ContactPage() {
             </div>
 
             {/* City Selection Tabs (matching reference UI) */}
-            <div className="flex items-center gap-2 bg-primary-navy/5 p-1.5 border border-primary-navy/15 rounded-[2px] self-start md:self-auto">
+            <div className="flex items-center gap-1.5 sm:gap-2 bg-primary-navy/5 p-1.5 border border-primary-navy/15 rounded-[2px] overflow-x-auto max-w-full no-scrollbar self-start md:self-auto">
               {offices.map((office) => (
                 <button
                   key={office.id}
                   onClick={() => setActiveOffice(office.id as any)}
-                  className={`px-6 py-2.5 text-xs font-semibold tracking-wider uppercase transition-all duration-300 ${
+                  className={`px-3 sm:px-6 py-2 sm:py-2.5 text-[10px] sm:text-xs font-semibold tracking-wider uppercase transition-all duration-300 flex-shrink-0 ${
                     activeOffice === office.id
                       ? 'bg-primary-gold text-primary-navy shadow-md font-bold'
                       : 'text-primary-navy/70 hover:text-primary-navy hover:bg-primary-navy/10'
@@ -457,7 +457,7 @@ export default function ContactPage() {
           </div>
 
           {/* Interactive Map & Floating Overlay Card Container */}
-          <div className="relative w-full h-[520px] md:h-[580px] overflow-hidden rounded-[2px] border border-white/15 shadow-2xl bg-[#081226]">
+          <div className="relative w-full h-[540px] md:h-[580px] overflow-hidden rounded-[2px] border border-white/15 shadow-2xl bg-[#081226]">
             {/* Styled Map iframe */}
             <iframe
               key={currentOffice.id}
@@ -467,20 +467,20 @@ export default function ContactPage() {
               loading="lazy"
             />
 
-            {/* Floating Info Card Overlay (Matching reference screenshot layout) */}
-            <div className="absolute top-4 left-4 right-4 md:top-8 md:left-8 md:right-auto z-20 md:w-96 bg-[#081226]/95 backdrop-blur-md border border-primary-gold/30 text-white p-6 sm:p-8 shadow-2xl space-y-6">
+            {/* Floating Info Card Overlay (Responsive mobile overlay) */}
+            <div className="absolute bottom-3 left-3 right-3 md:top-8 md:bottom-auto md:left-8 md:right-auto z-20 md:w-96 bg-[#081226]/95 backdrop-blur-md border border-primary-gold/30 text-white p-4 sm:p-6 md:p-8 shadow-2xl space-y-3 sm:space-y-6 max-h-[50%] md:max-h-none overflow-y-auto">
               <div>
-                <h3 className="font-serif text-3xl font-light tracking-tight text-white mb-4">
+                <h3 className="font-serif text-2xl sm:text-3xl font-light tracking-tight text-white mb-2 sm:mb-4">
                   {currentOffice.city}
                 </h3>
-                <div className="space-y-1.5 font-sans text-xs sm:text-sm text-white/80 font-light leading-relaxed">
+                <div className="space-y-1 font-sans text-xs sm:text-sm text-white/80 font-light leading-relaxed">
                   {currentOffice.address.map((line, idx) => (
                     <p key={idx}>{line}</p>
                   ))}
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-white/10 space-y-4">
+              <div className="pt-3 sm:pt-4 border-t border-white/10 space-y-2 sm:space-y-4">
                 <p className="font-sans text-xs text-white/80">
                   <span className="text-primary-gold font-medium">Voice:</span> {currentOffice.phone}
                 </p>

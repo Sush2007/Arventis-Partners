@@ -21,9 +21,9 @@ export const ALL_PEOPLE: MemberProfile[] = [
     slug: 'anshuman-mohanty',
     name: 'Anshuman Mohanty',
     title: 'FOUNDING PARTNER, STRATEGY CONSULTING',
-    category: 'Founding Partner',
+    category: 'Consultancy',
     image: '/Anshuman.jpg',
-    badge: 'Consulting Head',
+    badge: 'Founding Partner',
     credentials: 'MBA, IIM Lucknow  |  11+ Years  |  India · GCC · UK · US · South Korea',
     shortDesc: 'Strategy consulting leader with 11+ years of P&L ownership across consulting, BFSI, government, and tech.',
     bio: [
@@ -47,9 +47,9 @@ export const ALL_PEOPLE: MemberProfile[] = [
     slug: 'kumar-suman',
     name: 'Kumar Suman',
     title: 'FOUNDING PARTNER, LEGAL  |  ADVOCATE',
-    category: 'Founding Partner',
+    category: 'Legal',
     image: '/Suman.jpg',
-    badge: 'Legal Head',
+    badge: 'Founding Partner',
     credentials: 'Faculty of Law, Delhi University  |  10+ Years  |  Delhi · Himachal Pradesh',
     shortDesc: 'Supreme Court advocate specialising in commercial litigation, arbitration, infrastructure, and public law.',
     bio: [
@@ -110,8 +110,8 @@ export const ALL_PEOPLE: MemberProfile[] = [
     instagram: 'https://instagram.com'
   },
   {
-    slug: 'yash',
-    name: 'Yash',
+    slug: 'yash-thakur',
+    name: 'Yash Thakur',
     title: 'ADVOCATE │ CORPORATE & COMMERCIAL LITIGATION',
     category: 'Legal',
     image: '/yash.png',
@@ -119,74 +119,10 @@ export const ALL_PEOPLE: MemberProfile[] = [
     credentials: 'Bar Council │ High Court & Commercial Courts',
     shortDesc: 'Specialising in corporate contract disputes, recovery proceedings, and shareholder litigation.',
     bio: [
-      'Yash represents corporate clients and institutional investors in commercial recovery, contract enforcement actions, and shareholder disputes.',
+      'Yash Thakur represents corporate clients and institutional investors in commercial recovery, contract enforcement actions, and shareholder disputes.',
       'Works closely with the senior bench to prepare rigorous evidentiary strategy for complex commercial trials before trial and appellate courts.'
     ],
     highlights: ['Commercial Recovery', 'Contract Enforcement', 'Corporate Disputes'],
-    linkedin: 'https://linkedin.com',
-    instagram: 'https://instagram.com'
-  },
-  {
-    slug: 'advocate-1',
-    name: 'Advocate-1',
-    title: 'Senior Associate │ Civil Litigation',
-    category: 'Legal',
-    image: '/suman.png',
-    badge: 'Specialist Bench',
-    credentials: 'Civil Courts & High Court Practice',
-    shortDesc: 'Focusing on contractual disputes, property verification, and recovery suits.',
-    bio: [
-      'Specialist advocate attached to the core civil litigation wing of Arventis Legal, driving thorough due diligence and trial strategy.'
-    ],
-    highlights: ['Civil Disputes', 'Contract Review', 'Recovery Suits'],
-    linkedin: 'https://linkedin.com',
-    instagram: 'https://instagram.com'
-  },
-  {
-    slug: 'advocate-2',
-    name: 'Advocate-2',
-    title: 'Associate │ Arbitration & Infrastructure',
-    category: 'Legal',
-    image: '/suman.png',
-    badge: 'Specialist Bench',
-    credentials: 'Arbitral Tribunals & EPC Claims',
-    shortDesc: 'Handling infrastructure claims, delay disputes, and ad-hoc arbitrations.',
-    bio: [
-      'Specialist advocate handling domestic and institutional construction arbitration, EPC contract claims, and dispute resolution.'
-    ],
-    highlights: ['Arbitration', 'EPC Contracts', 'Delay Claims'],
-    linkedin: 'https://linkedin.com',
-    instagram: 'https://instagram.com'
-  },
-  {
-    slug: 'advocate-3',
-    name: 'Advocate-3',
-    title: 'Associate │ Corporate & Regulatory Advisory',
-    category: 'Legal',
-    image: '/suman.png',
-    badge: 'Specialist Bench',
-    credentials: 'Corporate Compliance & Statutory Filings',
-    shortDesc: 'Advising businesses on entity structuring, employment law, and statutory approvals.',
-    bio: [
-      'Advising corporate clients on statutory compliance, employment policy frameworks, and cross-border regulatory advisory.'
-    ],
-    highlights: ['Corporate Governance', 'Statutory Filings', 'Employment Policies'],
-    linkedin: 'https://linkedin.com',
-    instagram: 'https://instagram.com'
-  },
-  {
-    slug: 'advocate-4',
-    name: 'Advocate-4',
-    title: 'Associate │ Real Estate & Property Law',
-    category: 'Legal',
-    image: '/suman.png',
-    badge: 'Specialist Bench',
-    credentials: 'RERA Advisory & Title Verification',
-    shortDesc: 'Specialising in RERA compliance, title due diligence, and landlord-tenant disputes.',
-    bio: [
-      'Handling real estate transactions, RERA regulatory representation, boundary disputes, and commercial lease agreements.'
-    ],
-    highlights: ['RERA Advisory', 'Title Due Diligence', 'Lease Documentation'],
     linkedin: 'https://linkedin.com',
     instagram: 'https://instagram.com'
   }

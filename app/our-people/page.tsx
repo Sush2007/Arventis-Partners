@@ -74,15 +74,12 @@ export default function OurPeoplePage() {
     return () => observer.disconnect();
   }, []);
 
-  const foundingPartners = ALL_PEOPLE.filter((p) => p.category === 'Founding Partner');
   const consultancyMembers = ALL_PEOPLE.filter((p) => p.slug === 'anshuman-mohanty');
-  const legalMembersRow1Order = ['kumar-suman', 'yash', 'sweta', 'adarsh'];
-  const legalMembersRow1 = legalMembersRow1Order
+  const legalFoundingMember = ALL_PEOPLE.filter((p) => p.slug === 'kumar-suman');
+  const legalTeamOrder = ['yash-thakur', 'sweta', 'adarsh'];
+  const legalTeamMembers = legalTeamOrder
     .map((slug) => ALL_PEOPLE.find((p) => p.slug === slug))
     .filter((p): p is MemberProfile => p !== undefined);
-  const legalMembersRow2 = ALL_PEOPLE.filter((p) =>
-    ['advocate-1', 'advocate-2', 'advocate-3', 'advocate-4'].includes(p.slug)
-  );
 
   const renderCard = (member: MemberProfile) => (
     <div
@@ -189,27 +186,12 @@ export default function OurPeoplePage() {
         </div>
       </section>
 
-      {/* SECTION 1: FOUNDING PARTNERS */}
+      {/* SECTION 1: CONSULTANCY */}
       <section className="relative w-full bg-bg-warm py-20 md:py-28 px-6 md:px-16 text-primary-navy border-b border-primary-navy/10">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="scroll-fade-up flex items-center gap-4 pb-4 border-b border-primary-navy/15">
             <span className="font-sans text-xs sm:text-sm tracking-[0.3em] uppercase font-bold text-primary-gold-dark">
-              01 &nbsp;│&nbsp; FOUNDING PARTNERS
-            </span>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-            {foundingPartners.map(renderCard)}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 2: CONSULTANCY */}
-      <section className="relative w-full bg-white py-20 md:py-28 px-6 md:px-16 text-primary-navy border-b border-primary-navy/10">
-        <div className="max-w-7xl mx-auto space-y-12">
-          <div className="scroll-fade-up flex items-center gap-4 pb-4 border-b border-primary-navy/15">
-            <span className="font-sans text-xs sm:text-sm tracking-[0.3em] uppercase font-bold text-primary-gold-dark">
-              02 &nbsp;│&nbsp; CONSULTANCY PRACTICE
+              01 &nbsp;│&nbsp; CONSULTANCY PRACTICE
             </span>
           </div>
 
@@ -219,28 +201,32 @@ export default function OurPeoplePage() {
         </div>
       </section>
 
-      {/* SECTION 3: LEGAL BENCH */}
-      <section className="relative w-full bg-bg-warm py-20 md:py-28 px-6 md:px-16 text-primary-navy">
+      {/* SECTION 2: LEGAL BENCH */}
+      <section className="relative w-full bg-white py-20 md:py-28 px-6 md:px-16 text-primary-navy">
         <div className="max-w-7xl mx-auto space-y-16">
           <div className="scroll-fade-up flex items-center gap-4 pb-4 border-b border-primary-navy/15">
             <span className="font-sans text-xs sm:text-sm tracking-[0.3em] uppercase font-bold text-primary-gold-dark">
-              03 &nbsp;│&nbsp; LEGAL BENCH
+              02 &nbsp;│&nbsp; LEGAL BENCH
             </span>
           </div>
 
-          {/* Legal Row 1 (4 Members) */}
+          {/* Subsection A: FOUNDING MEMBER */}
           <div className="space-y-6">
-          
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {legalMembersRow1.map(renderCard)}
+            <h3 className="font-sans text-xs sm:text-sm tracking-[0.25em] uppercase font-bold text-primary-navy/70">
+              FOUNDING MEMBER
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {legalFoundingMember.map(renderCard)}
             </div>
           </div>
 
-          {/* Legal Row 2 (4 Members) */}
-          <div className="space-y-6 pt-6 border-t border-primary-navy/10">
-           
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {legalMembersRow2.map(renderCard)}
+          {/* Subsection B: LEGAL TEAM */}
+          <div className="space-y-6 pt-8 border-t border-primary-navy/10">
+            <h3 className="font-sans text-xs sm:text-sm tracking-[0.25em] uppercase font-bold text-primary-navy/70">
+              LEGAL TEAM
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {legalTeamMembers.map(renderCard)}
             </div>
           </div>
         </div>

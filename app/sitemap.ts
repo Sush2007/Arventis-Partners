@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/faq',
   ];
 
-  const teamSlugs = ['suman-thakur', 'yash-kashyap', 'sweta-verma', 'adarsh-kashyap', 'anshuman-mohanty'];
+  const teamSlugs = ['suman-thakur', 'yash-thakur', 'sweta-verma', 'adarsh-kashyap', 'anshuman-mohanty'];
 
   const teamRoutes = teamSlugs.map((slug) => `/our-people/${slug}`);
 

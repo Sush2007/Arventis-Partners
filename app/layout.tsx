@@ -89,7 +89,7 @@ export default function RootLayout({
         "url": "https://arventispartners.com",
         "logo": "https://arventispartners.com/logo-extended.png",
         "description": "Elite dual-discipline firm combining strategy consulting and legal advocacy.",
-        "slogan": "Judgment, Applied.",
+        "slogan": "Where Strategy meets consulting",
         "address": [
           {
             "@type": "PostalAddress",
@@ -123,7 +123,7 @@ export default function RootLayout({
         ],
         "founder": [
           { "@type": "Person", "name": "Suman Thakur", "jobTitle": "Founding Partner - Legal Practice" },
-          { "@type": "Person", "name": "Yash Kashyap", "jobTitle": "Founding Partner" },
+          { "@type": "Person", "name": "Yash Thakur", "jobTitle": "Founding Partner" },
           { "@type": "Person", "name": "Sweta Verma", "jobTitle": "Founding Partner" },
           { "@type": "Person", "name": "Adarsh Kashyap", "jobTitle": "Founding Partner" },
           { "@type": "Person", "name": "Anshuman Mohanty", "jobTitle": "Strategy Consulting Practice Lead" }
