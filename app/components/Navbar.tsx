@@ -55,7 +55,7 @@ export default function Navbar() {
     { label: 'about', href: '/about' },
     { label: 'our services', href: '/services' },
     { label: 'our people', href: '/our-people' },
-    { label: 'contact us', href: '/contact' },
+    { label: 'contact us', href: '/contact-us' },
   ];
 
   // Lock body scroll when full page menu is open
