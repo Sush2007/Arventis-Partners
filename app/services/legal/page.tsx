@@ -223,7 +223,7 @@ export default function LegalPage() {
           <div>
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 bg-black/5 hover:bg-[#fa0249] hover:text-white text-black text-xs tracking-[0.2em] font-bold uppercase px-5 py-3 transition-all duration-300 hover-target border border-black/10 shadow-md"
+              className="inline-flex items-center gap-2 bg-black/5 hover:bg-[#fa0249] hover:text-white text-black text-xs tracking-[0.2em] font-bold uppercase border border-black/10 px-5 py-3 transition-all duration-300 hover-target"
             >
               <ArrowLeft className="w-4 h-4" />
               <span>BACK TO OUR SERVICES</span>
@@ -232,10 +232,10 @@ export default function LegalPage() {
 
           <div>
             <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight leading-tight text-black mb-6 max-w-4xl">
-              <RevealHeading className="text-black">ARVENTIS LEGAL</RevealHeading>
+              <RevealHeading>ARVENTIS LEGAL</RevealHeading>
             </h1>
-            <p className="scroll-fade-up font-sans text-base sm:text-lg md:text-xl text-black/85 font-light leading-relaxed max-w-3xl transition-delay-300">
-              Courtroom credibility and surgical advocacy across trial courts, high courts, arbitral tribunals, and the Supreme Court of India.
+            <p className="scroll-fade-up font-sans text-base sm:text-lg md:text-xl text-black/70 font-light leading-relaxed max-w-3xl transition-delay-300">
+              Elite advocacy and legal counsel delivered by Supreme Court practitioners. Protecting commercial interests, navigating high-stakes disputes, and structuring defensible compliance frameworks.
             </p>
           </div>
         </div>
@@ -248,29 +248,33 @@ export default function LegalPage() {
             <div className="relative h-[380px] w-full bg-white">
               <Image
                 src="/Suman.jpg"
-                alt="Kumar Suman Headshot"
+                alt="Suman Thakur Headshot"
                 fill
-                className="object-contain object-center p-4"
-                sizes="(max-width: 1024px) 100vw, 40vw"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>
-            <div className="p-6 bg-white border-t border-black/5 text-black">
-              <h2 className="font-serif text-2xl md:text-3xl font-medium tracking-wide text-black">
-                KUMAR SUMAN
-              </h2>
+
+            {/* Profile Info */}
+            <div className="flex-1 space-y-6 flex flex-col justify-center p-6">
+              <div>
+                <h3 className="text-2xl md:text-4xl font-serif text-black mb-2 tracking-wide font-medium">
+                  SUMAN THAKUR
+                </h3>
               <p className="font-sans text-xs tracking-wider text-black/60 uppercase mt-1">Advocate, Delhi University</p>
             </div>
           </div>
+        </div>
 
           <div className="lg:col-span-7 space-y-6 scroll-fade-up transition-delay-200">
             <h3 className="font-serif text-3xl sm:text-4xl font-light leading-snug text-black">
               Accountable for real outcomes in high-stakes disputes.
             </h3>
             <div className="h-[1px] w-16 bg-[#fa0249] my-4" />
-            <div className="space-y-4 font-sans text-sm md:text-base text-black/75 leading-relaxed font-light">
-              <p>
-                Kumar Suman has built his practice across a decade of advocacy, litigation, and public interest law. His focus spans arbitration, land acquisition, infrastructure, and constitutional writ matters.
-              </p>
+              <div className="space-y-4 text-black/80 font-sans text-sm md:text-base leading-relaxed max-w-2xl">
+                <p>
+                  Suman Thakur has built his practice across a decade of advocacy, litigation, and public interest law. His focus spans arbitration, land acquisition, infrastructure, and constitutional writ matters.
+                </p>
               <p>
                 Arventis Legal fields a specialist bench of advocates covering civil litigation, corporate compliance, employment, IP, and real estate.
               </p>
@@ -306,7 +310,7 @@ export default function LegalPage() {
       </section>
 
       {/* CONTACT CTA SECTION */}
-      <section className="relative w-full bg-white py-20 px-6 md:px-16 border-t border-black/10 text-center text-black z-20">
+      <section className="relative w-full bg-[#fa0249] py-10 md:py-12 px-6 md:px-16 border-t border-black/10 text-center text-black z-20">
         <div className="max-w-4xl mx-auto space-y-6 scroll-fade-up">
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-black">
             Let's Start the Conversation
